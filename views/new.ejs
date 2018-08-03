@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+      
+
+    <link rel='stylesheet' type="text/css" href='/stylesheets/style.css' />
+      <!--    bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+      
+      
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script> 
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.js"></script>   
+      
+      
+<!--    summernote  -->
+      
+      <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote.css" rel="stylesheet">
+      <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote.js"></script>
+  </head>
+    
+    
+  <body>
+     
+      <nav class="navbar navbar-inverse navbar-static-top">
+<div class="container-fluid">
+
+<!-- BRAND -->
+<div class="navbar-header">
+<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#alignment-example" aria-expanded="false">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a class="navbar-brand" href="/"><img class="logo" style="width:40px" src="/images/un-logo.png"></a>
+</div>
+
+<!-- COLLAPSIBLE NAVBAR -->
+<div class="collapse navbar-collapse" id="alignment-example">
+
+<!-- Links -->
+<ul class="nav navbar-nav">
+<li ><a href="/new">New Blog<span class="sr-only"></span></a></li>
+<li><a href="/blogs">Archive</a></li>
+<li><a href="/contact">Contact</a></li>
+</ul>
+
+
+</div>
+
+</div>
+</nav> 
+    
+      
+    <div class="container">
+              
+        
+      <div class="row">
+      
+      <form name="blogform" method="POST" action="new">
+          
+         <h2>Create New Blog</h2> 
+        <div class="input-group">
+        <label for="Title">Title</label>
+        <input type="text" class="form-control" placeholder="Title" id="Title" name="title"> 
+        </div>    
+          
+        <div class="input-group">
+        <label for="Author">Author</label>
+        <input type="text" class="form-control" placeholder="Author" id="author" name="author"> 
+        </div> 
+          
+          
+        <div class="input-group">
+        <label for="datetime">Date / Time</label>
+        <input type="date" class="form-control" placeholder="datetime" id="date" name="date"> 
+        </div>
+          
+          
+        <div class="input-group">
+        <label for="image">Image Url</label>
+        <input type="text" class="form-control" placeholder="image" id="image" name="image"> 
+        </div>
+          
+        <div class="input-group">
+            <label for="image">Content</label>
+            <textarea id="summernote" name="content"></textarea>
+          
+        </div>   
+          
+         <button type="submit" class="btn btn-primary">POST</button> 
+          
+     </form>
+      
+      
+     </div> 
+        
+        <div class="panel-footer footer text-center">
+                <p>All rights reserved 2018 | Ilyaaz.</p>
+        </div> 
+        
+    </div>    
+
+      <script>
+      
+          $(document).ready(function() {
+        $('#summernote').summernote();
+        });
+      
+      </script>
+      
+  </body>
+</html>

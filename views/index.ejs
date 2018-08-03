@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+      <!--    bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  </head>
+  <body>
+      
+<nav class="navbar navbar-inverse navbar-static-top">
+<div class="container-fluid">
+
+<!-- BRAND -->
+<div class="navbar-header">
+<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#alignment-example" aria-expanded="false">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a class="navbar-brand" href="/"><img class="logo" style="width:40px" src="images/un-logo.png" ></a>
+</div>
+
+<!-- COLLAPSIBLE NAVBAR -->
+<div class="collapse navbar-collapse" id="alignment-example">
+
+<!-- Links -->
+<ul class="nav navbar-nav">
+<li ><a id="newblog" href="new">New Blog</a></li>
+<li><a href="blogs">Archive</a></li>
+<li><a href="contact">Contact</a></li>
+</ul>
+
+ <!-- Button -->
+<form method="POST" action="/signIn"> 
+    
+    
+<button id="submit-btn2" type="submit" class="btn btn-default navbar-btn navbar-right" style="margin-left:40px">Sign in</button>
+    
+<button id="submit-btn" onclick= "signIn()" type="button" class="btn btn-default navbar-btn navbar-right" style="margin-left:40px">Sign in</button>
+  
+    
+
+
+    <input id="password" type="password" class="form-control navbar-right nav_input" placeholder="Password" aria-describedby="basic-addon1" name="password">
+    
+  <input id="username" type="text" class="form-control navbar-right nav_input" placeholder="Username" aria-describedby="basic-addon1" name="username">
+  
+</form>    
+    
+   
+<button id="register" type="button" class="btn btn-default navbar-btn navbar-right" style="margin-left:40px">Register</button>
+    
+<a href="/"><button id="signOut" type="button" class="btn btn-danger navbar-btn navbar-right" style="margin-left:40px">Sign Out</button></a>
+  
+    
+ 
+    
+
+    
+
+</div>
+
+</div>
+</nav>    
+     
+      <% if (message) { %>
+          
+      <div class="alert alert-danger">
+      
+          <p id="alert_message"><%= message %></p>
+      
+      </div>
+      
+      <%  }    %>
+      
+      <% if (loggedUser) { %>
+          
+      <div class="alert alert-success" role="alert">
+      
+          <p>Hello: <%=loggedUser %></p>
+          
+         <% if (loggedUser = loggedUser ) { %>
+          
+          <script>
+          
+              function signOut(){
+                  
+        document.getElementById("username").style.display = "none";
+        document.getElementById("password").style.display = "none";
+        document.getElementById("submit-btn").style.display = "none";
+        document.getElementById("submit-btn2").style.display = "none";
+        document.getElementById("signOut").style.display = "block";
+        document.getElementById("register").style.display = "none";
+ 
+              }signOut();
+          
+          
+          </script>
+          
+          <%  }    %>
+          
+       
+          </div>
+          
+        
+      
+      
+      
+      <%  }    %>
+      
+      
+      
+      <div class="jumbotron">  
+          
+        
+      </div>
+      
+    <div class="container">
+     
+        
+        
+      <div class="row">
+      
+      
+      <% if (blogs) { %>
+      
+       <% for (let i = 0; i < 3; i++){ %>
+      
+          
+    <div class="col-xs-12 col-md-12 col-lg-4">      
+      <div class="panel">
+        <div class="panel-heading">
+        <h3 class="panel-title"><h3><%= blogs[i].title %></h3></h3>
+        </div>
+          
+        <div class="panel-body home_blog">
+         <p>Author: <%= blogs[i].author%></p>
+            <p>Date: <%= blogs[i].date%></p>
+            <img src="<%= blogs[i].image %>" height="250px" width="100%">
+            <p>Content:</p> <%- blogs[i].content%>
+            
+
+            <br>
+            
+            
+            
+        </div>
+          <div class="panel-footer text-center">
+              
+                <a href="view/<%= blogs[i].id %>">
+                <button id="<%= blogs[i].id %>" type="button" class="btn read_more">Read More</button>
+                </a>
+              
+        </div>
+          
+
+          
+           
+          
+      </div>
+          
+       </div>   
+           
+          
+        <% }; %>
+      
+      <% } else { %>
+      
+            <p>You have no blog posts</p>
+      
+      <% } %>
+          
+        
+      
+     </div> 
+        
+<!-- The Modal -->
+<div id="myModal" class="modal register-modal">
+  <span class="close">×</span>
+    <div id ="newsletter">
+        
+        
+        
+        <form name="form" id="newsletter-form" method="POST" action="/newsletter">
+        
+        <h2>Sign Up For Our Newsletter</h2> 
+        <div class="input-group news-input">
+        <label for="Name">Name</label>
+        <input name="name" type="text" class="form-control" placeholder="eg. John Smith" id="Name"> 
+        </div>    
+          
+        <div class="input-group news-input">
+        <label for="Email">Email Address</label>
+        <input name="email" type="email" class="form-control" placeholder="eg. johnsmith@gmail.com" id="Email"> 
+        </div> 
+        
+            <a href="/newsletter"><button type="submit" class="btn btn-primary">Submit</button></a>    
+        
+        
+        </form>
+  
+    </div>
+    
+    <div id ="register-div">
+    
+            <form name="form" id="register-form" method="POST" action="/register">
+        
+        <h2>Register</h2> 
+        <div class="input-group news-input">
+        <label for="Username">Username</label>
+        <input type="text" class="form-control" placeholder="eg. ilyisa98" id="Username" name="username"> 
+        </div>    
+          
+        <div class="input-group news-input">
+        <label for="Password">Password</label>
+        <input type="password" class="form-control" id="Password" name="password"> 
+        </div> 
+        
+        <p class="input-group">if you already have an account <button class="btn btn-success" onclick="signIn()" id="register-signIn" type="button">sign in</button></p>        
+                
+        <a href="/register"><button type="submit" class="btn btn-primary">Submit</button> </a>    
+        
+        
+        </form>
+    
+    
+    </div>
+</div>
+        
+        <div><img id="newsletter_icon" src="images/newsletter_icon.png" width="50px" height="50px" ></div>
+        
+         <div class="panel-footer footer text-center">
+                <p>All rights reserved 2018 | Ilyaaz.</p>
+        </div> 
+        
+    </div>    
+      
+      <script>
+      function signIn() {
+      var username = document.getElementById("username").value
+      var password = document.getElementById("password").value
+      
+//      console.log(username + password);
+    
+        document.getElementById("username").style.display = "block";
+        document.getElementById("password").style.display = "block";
+        document.getElementById("submit-btn").style.display = "none";
+        document.getElementById("submit-btn2").style.display = "block";
+//              console.log(username);
+          
+        document.getElementById('myModal').style.display = "none";  
+          
+}
+      
+      </script>
+      
+      
+      
+      <script>
+      
+      function modall(){
+        var modal = document.getElementById('myModal');
+
+        var openNews = document.getElementById('newsletter_icon');
+        var openReg = document.getElementById('register');
+
+            openNews.onclick = function() { 
+            modal.style.display = "block";
+            document.getElementById('register-form').style.display = "none";
+            document.getElementById('register-div').style.display = "none";
+            document.getElementById('newsletter').style.display = "block";
+            document.getElementById('newsletter-form').style.display = "block";
+            }
+            
+            openReg.onclick = function() { 
+            modal.style.display = "block";
+            document.getElementById('newsletter-form').style.display = "none";
+            document.getElementById('newsletter').style.display = "none";
+            document.getElementById('register-form').style.display = "block";
+            document.getElementById('register-div').style.display = "block";
+            }
+            
+            
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() { 
+            modal.style.display = "none";
+        }
+        }modall();
+      
+      </script>
+
+  </body>
+</html>

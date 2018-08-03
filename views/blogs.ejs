@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+       <!--    bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+      
+      <style>
+      
+          img{
+              margin-left:25%;
+          }
+      
+      </style>
+      
+  </head>
+  <body>
+      
+<nav class="navbar navbar-inverse navbar-static-top">
+<div class="container-fluid">
+
+<!-- BRAND -->
+<div class="navbar-header">
+<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#alignment-example" aria-expanded="false">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a class="navbar-brand" href="/"><img class="logo" style="width:40px" src="/images/un-logo.png"></a>
+</div>
+
+<!-- COLLAPSIBLE NAVBAR -->
+<div class="collapse navbar-collapse" id="alignment-example">
+
+<!-- Links -->
+<ul class="nav navbar-nav">
+<li ><a href="/new">New Blog<span class="sr-only"></span></a></li>
+<li><a href="/blogs">Archive</a></li>
+<li><a href="/contact">Contact</a></li>
+</ul>
+
+
+</div>
+
+</div>
+</nav>
+      
+      <div class="container">
+          
+        <br>
+        <br>
+        <h1>Archive</h1>
+        
+          
+          
+        <div class="row">
+      
+      
+         <% if (blogs.length != 0) { %>
+      
+       <% blogs.forEach(function(blogs){ %>
+      
+          
+    <div class="col-xs-12 col-md-12 col-lg-12">      
+      <div class="panel">
+        <div class="panel-heading">
+        <h3 class="panel-title"><h3><%= blogs.title %></h3></h3>
+        </div>
+          
+        <div class="panel-body home_blog">
+         <p>Author: <%= blogs.author%></p>
+            <p>Date: <%= blogs.date%></p>
+            <img class="index_img" src="<%= blogs.image %>" height="250px" width="50%">
+            <p>Content:</p> <%- blogs.content%>
+            
+
+            <br>
+            
+            
+            
+        </div>
+          <div class="panel-footer text-center">
+                <a href="view/<%= blogs.id %>">
+                <button id="<%= blogs.id %>" type="button" class="btn read_more">Read More</button>
+            </a>
+        </div> 
+          
+      </div>
+          
+       </div>   
+           
+          
+        <% }); %>
+      
+      <% } else { %>
+      
+            <p>You have no blog posts</p>
+      
+      <% } %>
+      
+     </div> 
+      
+          <div class="panel-footer footer text-center">
+                <p>All rights reserved 2018 | Ilyaaz.</p>
+        </div> 
+      
+      </div>
+          
+  </body>
+</html>

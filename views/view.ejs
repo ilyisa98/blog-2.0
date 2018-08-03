@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+       <!--    bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">  
+  </head>
+  <body>
+      
+<nav class="navbar navbar-inverse navbar-static-top">
+<div class="container-fluid">
+
+<!-- BRAND -->
+<div class="navbar-header">
+<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#alignment-example" aria-expanded="false">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a class="navbar-brand" href="/"><img class="logo" style="width:40px" src="/images/un-logo.png"></a>
+</div>
+
+<!-- COLLAPSIBLE NAVBAR -->
+<div class="collapse navbar-collapse" id="alignment-example">
+
+<!-- Links -->
+<ul class="nav navbar-nav">
+<li ><a href="/new">New Blog<span class="sr-only"></span></a></li>
+<li><a href="/blogs">Archive</a></li>
+<li><a href="/contact">Contact</a></li>
+</ul>
+
+
+</div>
+
+</div>
+</nav> 
+      
+      
+      <div class="container">
+          
+        <div class="row">
+            
+            
+      <h1>Recent Blog Posts</h1>
+            
+    
+         <div class="row">
+        <div class="col-xs-12 col-md-12 col-lg-12">      
+        <div class="panel">
+        <div class="panel-heading">
+        <h3 class="panel-title"><h3><%= blogs.title %></h3></h3>
+        </div>
+          
+        <div class="panel-body">
+         <p>Author: <%= blogs.author%></p>
+            <p>Date: <%= blogs.date%></p>
+            <p>Content:</p> <%- blogs.content%>
+            <img src="<%= blogs.image %>"  width="100%" height="80%">
+            
+            <a href="/edit/<%= blogs.id%>"><button type="button" id="<%= blogs.id%>">Edit</button></a>
+            
+            <button onclick="deleteBlog()" type="button" id="<%= blogs.id%>">Delete</button>
+            
+            
+            
+        </div>
+      </div>
+          
+       </div> 
+
+ </div> 
+      
+     </div> 
+          
+          <div class="panel-footer footer text-center">
+                <p>All rights reserved 2018 | Ilyaaz.</p>
+        </div> 
+
+      </div>
+        
+      <script>
+          
+      function deleteBlog() {
+      var r = confirm("Are you sure you want to delete this blog?");
+      if (r == true) {
+         window.location.href = 'http://localhost:3000/delete/<%= blogs.id%>';
+    } 
+    
+}
+      
+      </script>
+      
+  </body>
+</html>

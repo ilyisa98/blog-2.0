@@ -1,0 +1,109 @@
+{
+  "Blogs": [
+    {
+      "title": "9/11 Cover-Up",
+      "author": "Ilyaaz Isaacs",
+      "date": "2018-07-12",
+      "image": "http://img.timeinc.net/time/daily/2008/0811/top10_conspiracy_911.jpg",
+      "content": "Not since the JFK assassination has there been a national tragedy so heavily imprinted in American minds — or that has given rise to quite as many alternative explanations. While videos and photographs of the two planes striking the World Trade Center towers are famous around the world, the sheer profusion of documentary evidence has only provided even more fodder for conspiracy theories.<br> A May 2006 Zogby poll found that 42% of Americans believed that the government and the 9/11 commission 'concealed or refused to investigate critical evidence that contradicts their official explanation of the September 11th attacks.' Why had the military failed to intercept the hijacked planes? Had the government issued a 'stand down' order, to minimize interference with a secret plan to destroy the buildings and blame it on Islamic terrorists? In 2005, Popular Mechanics published a massive investigation of similar claims and responses to them. The reporting team found that the North American Aerospace Defense Command (NORAD) did not have a history of having fighter jets prepped and ready to intercept aircraft that had gone off route. And while the team found no evidence that the government had planned the attacks, lack of proof has rarely stopped conspiracy theorists before.",
+      "id": 1
+    },
+    {
+      "id": 2,
+      "title": "Area 51 and the Aliens",
+      "author": "Ilyaaz Isaacs",
+      "date": "2018-07-12",
+      "content": "We may have Tang thanks to the space program, but who gave us such innovations as the Stealth fighter and Kevlar? Aliens, of course. Conspiracy theorists believe that the remains of crashed UFO spacecrafts are stored at Area 51, an Air Force base about 150 miles from Las Vegas, where government scientists reverse-engineer the aliens' highly advanced technology. Fodder for this has come from a variety of supposed UFO sightings in the area and testimony from a retired Army colonel who says he was given access to extraterrestrial materials gathered from an alien spacecraft that crashed in Roswell, N.M. Some believe that the government studies time travel at Area 51, also known as Groom Lake or Dreamland.<br>The government has developed advanced aircraft and weapons systems at nearby Nellis Air Force Base, including Stealth bombers and reconnaissance planes. And the government's official line — that the details of Area 51 are classified for purposes of national security — is only seen as further proof that the military is hiding aliens or alien spacecraft.",
+      "image": "http://img.timeinc.net/time/daily/2008/0811/top10_conspiracy_area51.jpg"
+    },
+    {
+      "title": "Societies Control the World",
+      "author": "Ilyaaz Isaacs",
+      "date": "2018-07-12",
+      "image": "http://img.timeinc.net/time/daily/2008/0811/top10_conspiracy_freemasons.jpg",
+      "content": "If you were really a member of the global élite, you'd know this already: the world is ruled by a powerful, secretive few. Many of the rest of us peons have heard that in 2004 both candidates for the White House were members of Yale University's secretive Skull and Bones society, many of whose members have risen to powerful positions. But Skull and Bones is small potatoes compared with the mysterious cabals that occupy virtually every seat of power, from the corridors of government to the boardrooms of Wall Street.<br>Take the Illuminati, a sect said to have originated in 18th century Germany and which is allegedly responsible for the pyramid-and-eye symbol adorning the $1 bill: they intend to foment world wars to strengthen the argument for the creation of a worldwide government (which would, of course, be Satanic in nature). Or consider the Freemasons, who tout their group as the 'oldest and largest worldwide fraternity' and boast alumni like George Washington. Some think that despite donating heaps of cash to charity, they're secretly plotting your undoing at Masonic temples across the world. Or maybe, some theorize, the guys pulling the strings aren't concealed in shadow at all. They might be the intelligentsia on the Council on Foreign Relations, a cadre of policy wonks who allegedly count their aims as publishing an erudite bimonthly journal and establishing a unified world government — not necessarily in that order.",
+      "id": 3
+    },
+    {
+      "title": "What is the Illuminati?",
+      "author": "Ilyaaz Isaacs ",
+      "date": "2018-07-12",
+      "image": "https://www.thesun.co.uk/wp-content/uploads/2018/02/nintchdbpict000000291491.jpg?w=960",
+      "content": "Conspiracy theorists believe the Illuminati is attempting to control the world.<br>The original Illuminati dates back to the mid-1700s when it was founded by Bavarian law professor Adam Weishaupt.His intention was to start an academic organisation of modern thinkers prepared to challenge the views of the church.The Illuminati soon became a highly-secret society promoting enlightenment as well as moral progress for all.However, the angered priesthood revoked Weishaupt's academic credentials and banished him from the country.He moved to Germany where he was better received and free to grow a flourishing Illuminati and its philosophy.Its mission statement was 'to attain the highest possible degree of morality and virtue, and to lay the foundation for the reformation of the world by the association of good men to oppose the progress of moral evil.'While his ambitions seemed noble, Weishaupt also intended to change the way European nations were run using subversive means.To become a member of the Illuminati you needed wealth, social influence and, most importantly, political pull.Members of the society consisted of bankers, politicians, doctors and members of the privileged upper-classes.After Weishaupt's death the Illuminati is said to have formed 'lodges' all across the world.It is pretty well known that many of Americas founding fathers were members of the freemasons.George Washington, Benjamin Franklin and John Hancock were notable masons.The influence of their membership can be seen in the philosophies in the Constitution as well as symbolism in the US currency.However, some believe they were linked if not even secret members of the Illuminati.The use of the groups all-seeing eye symbol on the dollar bill is said to be a big clue.The Latin words encircling the pyramid translate to 'it has favoured our undertakings, new order of the ages.'''Some see those words as the announcement of a New World Order.",
+      "id": 4
+    },
+    {
+      "title": "Simple CSS Example",
+      "author": "axaxa",
+      "date": "2018-08-09",
+      "image": "https://cdn-images-1.medium.com/max/1600/0*TDuYHwIBvClPXrgk.",
+      "content": "<p>qwertyuiop</p>",
+      "id": 5
+    }
+  ],
+  "Users": [
+    {
+      "id": 1,
+      "username": "Ilyaaz",
+      "password": "qwerty"
+    },
+    {
+      "username": "BlackHammer",
+      "password": "12345",
+      "id": 2
+    },
+    {
+      "username": "NelisaBani",
+      "password": "qwerty",
+      "id": 3
+    },
+    {
+      "username": "alex",
+      "password": "alex",
+      "id": 4
+    },
+    {
+      "username": "aqq",
+      "password": "12345",
+      "id": 5
+    },
+    {
+      "username": "ridaa",
+      "password": "12345",
+      "id": 6
+    },
+    {
+      "username": "JP",
+      "password": "qwerty",
+      "id": 7
+    }
+  ],
+  "Newsletters": [
+    {
+      "id": 1,
+      "name": "Ilyaaz",
+      "email": "ilyaazisaacs@gmail.com"
+    },
+    {
+      "name": "Ilyaaz Isaacs ",
+      "email": "ilyaazisaacs@gmail.com",
+      "id": 2
+    }
+  ],
+  "Contact": [
+    {
+      "id": 1,
+      "firstname": "",
+      "lastname": "",
+      "email": "",
+      "message": ""
+    },
+    {
+      "firstname": "Ilyaaz",
+      "lastname": "Isaacs",
+      "email": "ilyaazisaacs@gmail.com",
+      "message": "<p>s</p>",
+      "id": 2
+    }
+  ]
+}

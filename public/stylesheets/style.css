@@ -4,6 +4,7 @@ body {
     background-size: contain;
     background-repeat: repeat;
     width: 100%;
+    font-family: 'Montserrat', sans-serif !important;
 }
 
 .navbar{
@@ -59,7 +60,9 @@ a {
 .panel{
     filter: drop-shadow(4px 4px 10px rgba(0,0,0,0.9));
 }
-
+.panel-body{
+    font-family: 'Montserrat', sans-serif !important;
+}
 .panel-heading {
   background-color: #222222 !important;
 }
@@ -79,6 +82,10 @@ a {
 .home_blog{
     height: 400px;
     overflow: hidden;
+}
+
+#view_img{
+    margin-left: 25%;
 }
 
 #newsletter_icon{
